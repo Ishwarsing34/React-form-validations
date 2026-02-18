@@ -11,6 +11,9 @@ function App() {
   const [confirmPassword , setConfirmPassword] = useState('')
  const [error ,setError] = useState('')
 
+
+ const [users , setUsers] = useState([])
+
   const submitHandler = (e) =>{
         
     e.preventDefault();
@@ -33,6 +36,10 @@ function App() {
       setError('Password should contain capital letters')
       return;
     }
+
+    const copyUsers = [...users];
+
+    setUsers([...copyUsers, {fullName,email,password}])
 
     setFullName('')
     setEmail('')
