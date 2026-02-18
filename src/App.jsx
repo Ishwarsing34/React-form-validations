@@ -29,6 +29,11 @@ function App() {
        return;
     }
 
+    if(!/[A-Z]/.test(password)){
+      setError('Password should contain capital letters')
+      return;
+    }
+
     setFullName('')
     setEmail('')
     setConfirmPassword('')
