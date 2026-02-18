@@ -22,7 +22,7 @@ function App2() {
 
     const {name,value} = e.target;
 
-    setFormData({
+    setFormData(...formData , {
       [name]:[value]
     })
 
