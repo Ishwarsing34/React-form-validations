@@ -18,13 +18,21 @@ function App2() {
   const [error ,setError] = useState('');
 
 
-  const handleChange = () =>{
+  const handleChange = (e) =>{
+
+    const {name,value} = e.target;
+
+    setFormData({
+      [name]:[value]
+    })
 
   }
 
   const submitHandler = (e) => {
 
     e.preventDefault();
+
+    //rest logic of validations
 
 
 
