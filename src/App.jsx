@@ -26,6 +26,7 @@ function App() {
 
     if(!/[`!@#$%^&*()><.,;]/.test(password)){
        setError('Password must contains any special characters')
+       return;
     }
 
     setFullName('')
